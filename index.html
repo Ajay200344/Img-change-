@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            
+        }
+        #light{
+            height: 300px;
+            width:300px;
+            background-image: url("react.png");
+            background-size: cover;
+            margin-top: 100px;
+            
+            
+        }
+        #b1, #b2{
+            font-size: 30px;
+            background-color: yellow;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+        <div id="light"></div>
+        <div class="buttons">
+            <button id="b1">click</button>
+            <button id="b2">double click</button>
+        </div>
+        <script>
+            const ligh=document.getElementById("light");
+            const btn1=document.getElementById("b1");
+            const btn2=document.getElementById("b2");
+            let flag=0;
+            btn1.addEventListener("click", () =>{
+                if(flag==0){
+                     ligh.style.backgroundImage = "url('programing.png')";
+                    flag=1;
+                }else{
+                    ligh.style.backgroundImage = "url('react.png')";
+                    flag=0;
+                }
+
+            });
+
+            btn2.addEventListener("dblclick", () =>{
+                if(flag==0){
+                    ligh.style.backgroundImage = "url('programing.png')";
+                    flag=1;
+                }else{
+                    ligh.style.backgroundImage = "url('react.png')";
+                    flag=0;
+                }
+
+            });
+            ligh.addEventListener("mouseover", () =>{
+                if(flag==0){
+                    ligh.style.backgroundImage = "url('programing.png')";
+                    flag=1;
+                }else{
+                    ligh.style.backgroundImage = "url('react.png')";
+                    flag=0;
+                }
+            });
+        </script>
+</body>
+</html>
